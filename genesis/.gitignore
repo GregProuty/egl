@@ -1,0 +1,17 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# misc
+.DS_Store
+
+# local env files
+.env
+
+# file history
+.history
+
+# openzeppelin proxy information - only commit mainnet info
+.openzeppelin
+!.openzeppelin/mainnet.json

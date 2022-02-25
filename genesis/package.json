@@ -1,0 +1,40 @@
+{
+  "name": "egl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test --network ganache",
+    "compile": "truffle compile --all",
+    "mig-ganache": "truffle migrate --reset --network ganache",
+    "mig-ropsten": "truffle migrate --reset --network ropsten",
+    "mig-mainnet": "truffle migrate --network mainnet",
+    "ownership-ganache": "truffle migrate -f 3 --to 3 --reset --network ganache",
+    "ownership-ropsten": "truffle migrate -f 3 --to 3 --reset --network ropsten",
+    "ownership-mainnet": "truffle migrate -f 3 --to 3 --network mainnet",
+    "con-ganache": "truffle console --network ganache",
+    "con-ropsten": "truffle console --network ropsten",
+    "con-mainnet": "truffle console --network mainnet",
+    "size": "truffle run contract-size"
+  },
+  "author": "Shane van Coller",
+  "license": "MIT",
+  "devDependencies": {
+    "@openzeppelin/contracts-upgradeable": "^3.3.0",
+    "@openzeppelin/test-helpers": "^0.5.10",
+    "@openzeppelin/truffle-upgrades": "^1.5.0",
+    "@truffle/contract": "^4.3.5",
+    "@truffle/hdwallet-provider": "^1.2.1",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "bn.js": "^5.1.3",
+    "dotenv": "^8.2.0",
+    "eth-gas-reporter": "^0.2.21",
+    "solhint": "^3.3.2",
+    "truffle-contract-size": "^2.0.1",
+    "truffle-plugin-verify": "^0.5.11"
+  }
+}

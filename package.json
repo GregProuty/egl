@@ -1,0 +1,17 @@
+{
+    "name": "egl_master",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "get-genesis-abis": "cd ./genesis && yarn compile && truffle migrate && cp ./build/contracts/* ../egl_client/lib/contracts && cd ..",
+        "get-voting-abis": "cd ./voting && yarn compile && truffle migrate && cp ./build/contracts/* ../egl_client/lib/contracts && cd ..",
+        "get-abis": "yarn get-genesis-abis && yarn get-voting-abis",
+        "dev": "cd ./egl_client && yarn dev",
+        "build": "yarn get-genesis-abis && get-voting-abis && cd ./egl_client && next build && next export",
+        "start": "yarn get-genesis-abis && get-voting-abis && cd ./egl_client && next start",
+        "rmabi": "rm -rf ./egl_client/lib/contracts/* && rm -rf  ./genesis/build/contracts/* && rm -rf ./voting/build/contracts/*"
+    },
+    "author": "",
+    "license": "ISC"
+}
